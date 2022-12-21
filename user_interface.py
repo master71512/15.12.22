@@ -16,14 +16,6 @@ def teacher_greeting():
         action = int(input("Пожалуйста, выберите действие: 1, 2 или 0\n"))
     return action
 
-# def add_student():
-#     name = input('Введите фамилию ученика для добавления в журнал\n')
-#     return name
-
-# def find_student():
-#     name = input('Введите фамилию ученика для добавления оценки\n')
-#     return name
-
 def discipline_enter():
     discipline = input('Введите название учебной дисциплины для добавления оценки\n')
     return discipline
@@ -32,10 +24,7 @@ def wrong_discipline():
     ans = int(input('Такой дисциплины нет в списке. Добавить - введите 1, повторить ввод - введите 2, выйти - введите 0\n'))
     while ans < 0 or ans > 2:
         ans = int(input("Пожалуйста, выберите действие: 1, 2 или 0\n"))
-    if ans == '0':
-        goodbye()
-    else:
-        return ans
+    return ans
 
 def score_enter():
     score = int(input("Введите оценку от 2 до 5\n"))
@@ -59,7 +48,5 @@ def find_name():
     while name not in students:
         name = wrong_name()
         if name == '0':
-            goodbye()
-        else:
-            return name
-find_name()
+            break
+    return name
