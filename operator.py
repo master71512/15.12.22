@@ -4,6 +4,6 @@ import student_action
 def user_role():
     role = ui.user_ident()
     if role == 2:
-        student_action.find_name()
+        student_action.show_scores()
 
 user_role()

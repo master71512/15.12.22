@@ -49,7 +49,7 @@ def goodbye():
 
 def wrong_name():
     name = input("Такой фамилии нет в списке. Возможно, Вы ошиблись, или фамилию еще не добавили в список.\n\
-    Введите фамилию еще раз или введите 0 для выхода")
+    Введите фамилию еще раз или введите 0 для выхода\n")
     return name
 
 def find_name():
@@ -62,3 +62,4 @@ def find_name():
             goodbye()
         else:
             return name
+find_name()

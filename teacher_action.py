@@ -4,9 +4,9 @@ from openpyxl import load_workbook
 def choose_action():
     action = ui.teacher_greeting()
     while action != 0:
-        if action == 1:
-            add_score()
         if action == 2:
+            add_score()
+        if action == 1:
             add_sheet()
         action = ui.teacher_greeting
     ui.goodbye()
@@ -31,4 +31,4 @@ def add_score():
     w_book.save('test.xlsx')
     choose_action()
     
-
+choose_action()
